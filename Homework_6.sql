@@ -6,13 +6,24 @@
 -- Q4: film tablosunda bulunan filmlerin uzunluğu 150 dakikadan büyük olanlarına ait kaç farklı replacement_cost değeri vardır?
 
 -- A1:
-SELECT AVG(rental_rate) FROM film;
+SELECT 
+  AVG(rental_rate)
+FROM film;
 
 -- A2:
-SELECT COUNT(*) FROM film WHERE title LIKE 'C%';
+SELECT 
+  COUNT(*)
+FROM film
+WHERE title LIKE 'C%';
 
 -- A3:
-SELECT MAX(length) FROM film WHERE rental_rate = '0.99';
+SELECT
+  MAX(length)
+FROM film
+WHERE rental_rate = '0.99';
 
 -- A4:
-SELECT COUNT(DISTINCT replacement_cost) FROM film WHERE length > 150;
+SELECT
+  COUNT(DISTINCT replacement_cost)
+FROM film
+WHERE length > 150;
