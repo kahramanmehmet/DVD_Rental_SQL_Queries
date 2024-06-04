@@ -6,12 +6,15 @@
 -- Q4: city tablosunda bulunan şehir verilerini country_id sütununa göre gruplandırdıktan sonra en fazla şehir sayısı barındıran country_id bilgisini ve şehir sayısını paylaşınız.
 
 -- A1:
-SELECT rating, COUNT(*)
+SELECT 
+  rating, 
+  COUNT(*)
 FROM film
 GROUP BY rating;
 
 -- A2:
-SELECT replacement_cost,
+SELECT 
+  replacement_cost,
 COUNT(*)
 FROM film
 GROUP BY replacement_cost
@@ -19,13 +22,15 @@ HAVING COUNT(*) > 50
 ORDER BY replacement_cost ASC;
 
 -- A3:
-SELECT store_id,
+SELECT 
+  store_id,
 COUNT(*)
 FROM customer
 GROUP BY store_id;
 
 -- A4:
-SELECT country_id,
+SELECT 
+  country_id,
 COUNT(*)
 FROM city
 GROUP BY country_id
