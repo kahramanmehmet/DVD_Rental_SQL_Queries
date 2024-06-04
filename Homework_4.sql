@@ -7,16 +7,29 @@
 -- Q5: city tablosundaki şehir isimlerinin kaç tanesi 'R' veya r karakteri ile biter?
 
 -- A1:
-SELECT DISTINCT replacement_cost FROM film;
+SELECT
+  DISTINCT replacement_cost
+FROM film;
 
 -- A2:
-SELECT COUNT(DISTINCT replacement_cost) FROM film;
+SELECT
+  COUNT(DISTINCT replacement_cost)
+FROM film;
 
 -- A3:
-SELECT COUNT(DISTINCT title) FROM film WHERE title LIKE 'T%' AND rating = 'G';
+SELECT
+  COUNT(DISTINCT title)
+FROM film
+WHERE title LIKE 'T%' AND rating = 'G';
 
 -- A4:
-SELECT COUNT(*) FROM country WHERE country LIKE '_____';
+SELECT
+  COUNT(*)
+FROM country
+WHERE country LIKE '_____';
 
 -- A5:
-SELECT COUNT(*) FROM city WHERE city ILIKE '%r';
+SELECT
+  COUNT(*)
+FROM city
+WHERE city ILIKE '%r';
